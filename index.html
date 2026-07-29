@@ -6,13 +6,18 @@
   <title>Clicon - eCommerce Store</title>
   
   <!-- Phosphor Icons CSS via CDN -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/deals.css">
+  <link rel="stylesheet" href="css/categories.css">
+
 </head>
 <body>
 
@@ -207,15 +212,274 @@
       </div>
     </section>
 
-    <!-- 6. Best Deals Section (Chuẩn bị triển khai tiếp) -->
-    <section class="deals-section">
-      <!-- Sẽ code phần Countdown + Lưới sản phẩm ở đây -->
+   <!-- 6. Best Deals Section -->
+<section class="deals-section">
+  <div class="container deals-container">
+    
+    <!-- Deals Header: Tiêu đề + Countdown Timer + Link -->
+    <div class="deals-header">
+      <div class="deals-title-box">
+        <h2 class="section-title">Best Deals</h2>
+        <div class="deals-countdown">
+          <span class="countdown-label">Deals ends in</span>
+          <div class="timer">
+            <span class="time-box" id="days">16</span>d :
+            <span class="time-box" id="hours">21</span>h :
+            <span class="time-box" id="minutes">57</span>m :
+            <span class="time-box" id="seconds">23</span>s
+          </div>
+        </div>
+      </div>
+      <a href="#" class="browse-all-link">Browse All Products <i class="ph ph-arrow-right"></i></a>
+    </div>
 
-    </section>
+    <!-- Deals Content Layout -->
+    <div class="deals-content">
+      
+      <!-- Cột Trái: Sản phẩm Nổi bật Lớn (PS5) -->
+      <div class="deal-featured-card">
+        <div class="card-badges">
+          <span class="badge-discount">32% OFF</span>
+          <span class="badge-status">HOT</span>
+        </div>
+        
+        <div class="card-image">
+          <img src="assets/images/ps5-console.png" alt="Console PlayStation 5">
+        </div>
+
+        <div class="card-info">
+          <div class="rating">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <span class="rating-count">(52,677)</span>
+          </div>
+          <h3 class="product-title">Xbox Series S - 512GB SSD Console with Wireless Controller - EU Versio...</h3>
+          <div class="product-price">
+            <span class="old-price">$865.99</span>
+            <span class="current-price">$442.12</span>
+          </div>
+          <p class="product-desc">Games built using the Xbox Series X|S development kit showcase unparalleled load times and visuals.</p>
+
+          <!-- Quick Action Buttons -->
+          <div class="card-bottom-actions">
+            <button class="icon-btn"><i class="ph ph-heart"></i></button>
+            <button class="btn-add-cart"><i class="ph ph-shopping-cart-simple"></i> ADD TO CART</button>
+            <button class="icon-btn"><i class="ph ph-eye"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột Phải: Lưới Sản Phẩm Nhỏ (8 Card) -->
+      <div class="deals-grid">
+        
+        <!-- Card 1 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="badge-sold-out">SOLD OUT</span>
+          </div>
+          <div class="card-img-box">
+            <img src="assets/images/drone.png" alt="Bose Sport Earbuds">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h4>
+            <div class="card-price">
+              <span class="current-price">$2,300</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card">
+          <div class="card-img-box">
+            <img src="assets/images/phone1.png" alt="Simple Mobile 4G LTE Prepaid Smartphone">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">Simple Mobile 4G LTE Prepaid Smartphone</h4>
+            <div class="card-price">
+              <span class="current-price">$220</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="badge-discount">19% OFF</span>
+          </div>
+          <div class="card-img-box">
+            <img src="assets/images/controller.png" alt="4K UHD LED Smart TV with Chromecast Built-in">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">4K UHD LED Smart TV with Chromecast Built-in</h4>
+            <div class="card-price">
+              <span class="old-price">$865</span>
+              <span class="current-price">$1,50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card">
+          <div class="card-img-box">
+            <img src="assets/images/headphone.png" alt="Sony DSCHX8 High Zoom Point & Shoot Camera">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">Sony DSCHX8 High Zoom Point & Shoot Camera</h4>
+            <div class="card-price">
+              <span class="current-price">$1,200</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card">
+          <div class="card-img-box">
+            <img src="assets/images/phone.png" alt="Dell Optiplex All-in-One Computer Monitor">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">Dell Optiplex 7000x7480 All-in-One Computer Monitor</h4>
+            <div class="card-price">
+              <span class="current-price">$299</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card">
+          <div class="card-img-box">
+            <img src="assets/images/portable-wshing-machine.png" alt="Portable Washing Machine">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">Portable Wshing Machine, 11lbs capacity Model 18NMFIAM</h4>
+            <div class="card-price">
+              <span class="old-price">$865.99</span>
+              <span class="current-price">$70</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="badge-status">HOT</span>
+          </div>
+          <div class="card-img-box">
+            <img src="assets/images/screen.png" alt="2-Barrel Carburetor Carb 2100 Engine">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">2-Barrel Carburetor Carb 2100 Engine Increase Horsepower</h4>
+            <div class="card-price">
+              <span class="current-price">$160</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="badge-discount">32% OFF</span>
+          </div>
+          <div class="card-img-box">
+            <img src="assets/images/camera.png" alt="JBL FLIP 4 - Waterproof Portable Bluetooth Speaker">
+            <div class="card-hover-actions">
+              <button class="hover-btn" title="Add to Wishlist"><i class="ph ph-heart"></i></button>
+              <button class="hover-btn" title="Add to Cart"><i class="ph ph-shopping-cart-simple"></i></button>
+              <button class="hover-btn" title="Quick View"><i class="ph ph-eye"></i></button>
+            </div>
+          </div>
+          <div class="card-details">
+            <h4 class="card-title">JBL FLIP 4 - Waterproof Portable Bluetooth Speaker - Black</h4>
+            <div class="card-price">
+              <span class="old-price">$360</span>
+              <span class="current-price">$250</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- 7. Shop with Categorys -->
     <section class="categories-section">
+      <h2 class="section-title">Shop with Categorys</h2>
+      <div class="categories-wrapper">
+        <!-- Nút chuyển trái -->
+        <button class="cat-slider-btn prev-btn" aria-label="Previous categories"><i class="ph ph-arrow-left"></i></button>
 
-       
+        <div class="categories-grid">
+          <!-- Card 1 -->
+          <div class="category-card">
+            <img src="assets/images/category1.png" alt="Computer & Laptop">
+            <span class="category-name">Computer & Laptop</span>
+          </div>
+          <!-- Card 2 -->
+          <div class="category-card">
+            <img src="assets/images/category2.png" alt="SmartPhone">
+            <span class="category-name">SmartPhone</span>
+          </div>
+          <!-- Card 3 -->
+          <div class="category-card">
+            <img src="assets/images/category3.png" alt="Headphones">
+            <span class="category-name">Headphones</span>
+          </div>
+          <!-- Card 4 -->
+          <div class="category-card">
+            <img src="assets/images/category4.png" alt="Accessories">
+            <span class="category-name">Accessories</span>
+          </div>
+          <!-- Card 5 -->
+          <div class="category-card">
+            <img src="assets/images/category5.png" alt="Camera & Photo">
+            <span class="category-name">Camera & Photo</span>
+          </div>
+          <!-- Card 6 -->
+          <div class="category-card">
+            <img src="assets/images/controller.png" alt="TV & Homes">
+            <span class="category-name">TV & Homes</span>
+          </div>
+        </div>
+
+        <!-- Nút chuyển phải -->
+        <button class="cat-slider-btn next-btn" aria-label="Next categories"><i class="ph ph-arrow-right"></i></button>
+      </div>
     </section>
 
     <!-- 8. Featured Products -->
@@ -275,5 +539,6 @@
 
   <script src="js/top-banner.js"></script>
   <script src="js/header.js"></script>
+  <script src="js/countdown.js"></script>
 </body>
 </html>

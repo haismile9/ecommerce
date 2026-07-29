@@ -1,0 +1,121 @@
+/* Section Shop with Categorys - Chuẩn thiết kế Figma */
+.categories-section {
+  max-width: 1320px;
+  margin: 40px auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.categories-section .section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #191c1f;
+  margin-bottom: 32px;
+  text-align: center;
+  display: block;
+}
+
+/* Wrapper chứa nút mũi tên trái/phải và lưới danh mục */
+.categories-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Lưới 6 card danh mục */
+.categories-container,
+.categories-grid,
+.categories-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling từng Card danh mục */
+.category-card {
+  background: #ffffff;
+  border: 1px solid #e4e7e9;
+  border-radius: 4px;
+  padding: 24px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #191c1f;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  min-height: 210px;
+}
+
+.category-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.category-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
+}
+
+.category-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #191c1f;
+  line-height: 1.4;
+}
+
+/* Nút mũi tên màu cam hai bên trái/phải (Slider arrows) */
+.cat-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fa8232;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(250, 130, 50, 0.35);
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.cat-slider-btn:hover {
+  background-color: #e06c1b;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.cat-slider-btn.prev-btn {
+  left: -22px;
+}
+
+.cat-slider-btn.next-btn {
+  right: -22px;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 1024px) {
+  .categories-container,
+  .categories-grid,
+  .categories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
