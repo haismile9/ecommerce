@@ -1,0 +1,73 @@
+/* Reset căn bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Ẩn menu trên mobile khi chưa có JS */
+  }
+}
+
+/* Nút Hamburger ẩn ở màn hình máy tính */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #1e293b;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive cho màn hình nhỏ (Mobile) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Hiện nút hamburger */
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%; /* Mặc định giấu menu sang bên trái */
+    top: 60px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+  }
+
+  /* Class được JS thêm vào khi bấm mở menu */
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Biến nút hamburger thành dấu X */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

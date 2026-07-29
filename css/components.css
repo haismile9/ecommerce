@@ -1,0 +1,82 @@
+/* 1. Khung ngoài cùng */
+.category-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e7e9;
+  padding: 12px 0;
+}
+
+/* 2. Container dàn hàng ngang */
+.category-bar .container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 3. Nút All Category */
+.btn-all-category {
+  background-color: #f2f4f5;
+  color: #191c1f;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 4. Danh sách Quick Links */
+.quick-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ép thẻ li hiển thị Icon và Chữ nằm ngang đẹp mắt */
+.quick-links li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #5f6c72;
+}
+
+.quick-links i {
+  font-size: 20px; /* SỬA LỖI: dùng font-size thay vì size */
+  color: #5f6c72;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #5f6c72;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.quick-links li:hover a,
+.quick-links li:hover i {
+  color: #1b6392; /* Hover cả icon lẫn chữ cùng đổi màu */
+}
+
+/* 5. Hotline bên phải */
+.hotline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #191c1f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hotline i {
+  font-size: 20px;
+  color: #191c1f;
+}

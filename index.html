@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicon - eCommerce Store</title>
+  
+  <!-- Phosphor Icons CSS via CDN -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- 1. Top Banner (Black Friday) -->
+  <div class="top-banner">
+    <div class="banner-badge">
+      <span class="badge-black">Black</span>
+      <span class="badge-friday">Friday</span>
+    </div>
+    <div class="banner-text">
+      Up to <span class="highlight-discount">59%</span> OFF
+    </div>
+    <div class="banner-actions">
+      <button class="shop-now" id="shopNow">SHOP NOW <span>&rarr;</span></button>
+      <button class="close-banner" id="closeBanner">&#10005;</button>
+    </div>
+  </div>
+
+  <!-- 2. Top Header (Thanh xanh dương nhỏ bên trên) -->
+  <div class="top-header">
+    <div class="top-header-container">
+      <span class="top-header-text">Welcome to Clicon online eCommerce store.</span>
+      
+      <div class="top-header-right">
+        <span class="follow-us">Follow us:</span>
+        <div class="social-icons">
+          <a href="#"><i class="ph ph-twitter-logo"></i></a>
+          <a href="#"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+          <a href="#"><i class="ph ph-reddit-logo"></i></a>
+          <a href="#"><i class="ph ph-youtube-logo"></i></a>
+          <a href="#"><i class="ph ph-instagram-logo"></i></a>
+        </div>
+        <span class="divider">|</span>
+        <select class="top-select"><option>Eng</option></select>
+        <select class="top-select"><option>USD</option></select>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Main Header (Thanh xanh dương lớn chứa Logo & Search) -->
+  <header class="main-header">
+    <div class="main-header-container">
+      <a href="#" class="logo">CLICON</a>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search for anything...">
+        <button class="search-btn"><i class="ph ph-magnifying-glass"></i></button>
+      </div>
+
+      <div class="header-user-actions">
+        <a href="#" class="action-icon cart-icon">
+          <i class="ph ph-shopping-cart-simple"></i>
+          <span class="badge-count">2</span>
+        </a>
+        <a href="#" class="action-icon"><i class="ph ph-heart"></i></a>
+        <a href="#" class="action-icon"><i class="ph ph-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sub Navigation / Category Bar trang chủ -->
+    <div class="category-bar">
+      <div class="container">
+        <div class="category-dropdown">
+          <button class="btn-all-category">
+            All Category <i class="ph ph-caret-down"></i>
+          </button>
+        </div>
+        
+        <ul class="quick-links">
+          <li>
+            <i class="ph ph-map-pin-line"></i>
+            <a href="#">Track Order</a>
+          </li>
+          <li>
+            <i class="ph ph-arrows-counter-clockwise"></i>
+            <a href="#">Compare</a>
+          </li>
+          <li>
+            <i class="ph ph-headphones"></i>
+            <a href="#">Customer Support</a>
+          </li>
+          <li>
+            <i class="ph ph-info"></i>
+            <a href="#">Need Help</a>
+          </li>
+        </ul>
+
+        <div class="hotline">
+          <i class="ph ph-phone-call"></i>
+          <span>+1-202-555-0104</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Hero Banner Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Main Banner Xbox (Trái) -->
+        <div class="hero-main-banner">
+          <div class="banner-content">
+            <span class="sub-title">THE BEST PLACE TO PLAY</span>
+            <h1 class="main-title">Xbox Consoles</h1>
+            <p class="description">
+              Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.
+            </p>
+            <button class="btn-shop-orange">
+              SHOP NOW <i class="ph ph-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="banner-image">
+            <img src="assets/images/xbox-console.png" alt="Xbox Consoles">
+            <div class="price-badge">$299</div>
+          </div>
+
+          <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- Side Banners (Phải) -->
+        <div class="hero-side-banners">
+          <!-- Side Banner 1: Google Pixel 6 Pro -->
+          <div class="side-banner banner-dark">
+            <span class="badge-yellow">29% OFF</span>
+            <div class="side-content">
+              <span class="side-sub">SUMMER SALES</span>
+              <h3 class="side-title">New Google Pixel 6 Pro</h3>
+              <button class="btn-shop-orange">
+                SHOP NOW <i class="ph ph-arrow-right"></i>
+              </button>
+            </div>
+            <img src="assets/images/google-pixel.png" alt="Google Pixel 6 Pro">
+          </div>
+
+          <!-- Side Banner 2: Xiaomi FlipBuds Pro -->
+          <div class="side-banner banner-light">
+            <img src="assets/images/xiaomi-buds.png" alt="Xiaomi FlipBuds Pro">
+            <div class="side-content">
+              <h3 class="side-title">Xiaomi FlipBuds Pro</h3>
+              <span class="side-price">$299 USD</span>
+              <button class="btn-shop-orange">
+                SHOP NOW <i class="ph ph-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Services Bar (4 cột dịch vụ) -->
+    <section class="services-section">
+      <div class="container services-container">
+        <div class="service-item">
+          <i class="ph ph-package"></i>
+          <div class="service-text">
+            <h4>FASTEST DELIVERY</h4>
+            <p>Delivery in 24/H</p>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <i class="ph ph-trophy"></i>
+          <div class="service-text">
+            <h4>24 HOURS RETURN</h4>
+            <p>100% money-back guarantee</p>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <i class="ph ph-credit-card"></i>
+          <div class="service-text">
+            <h4>SECURE PAYMENT</h4>
+            <p>Your money is safe</p>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <i class="ph ph-headset"></i>
+          <div class="service-text">
+            <h4>SUPPORT 24/7</h4>
+            <p>Live contact/message</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Best Deals Section (Chuẩn bị triển khai tiếp) -->
+    <section class="deals-section">
+      <!-- Sẽ code phần Countdown + Lưới sản phẩm ở đây -->
+
+    </section>
+    <!-- 7. Shop with Categorys -->
+    <section class="categories-section">
+
+       
+    </section>
+
+    <!-- 8. Featured Products -->
+    <section class="featured-section">
+ 
+
+    </section>
+
+    <!-- 9. Banner2 -->
+    <section class="banner2-section">
+ 
+
+    </section>
+
+    <!-- 10. Computer Accessories -->
+    <section class="accessories-section">
+ 
+
+    </section>
+
+    <!-- 11. Banner3 -->
+    <section class="banner3-section">
+ 
+
+    </section>
+
+
+    <!-- 12. flash sale today - best sellers - top rated - new arrivals -->
+    <section class="featured2-section">
+ 
+
+    </section>
+
+    <!-- 13. latest news -->
+    <section class="news-section">
+ 
+
+    </section>
+
+    <!-- 14. Subscribe -->
+    <section class="subscribe-section">
+ 
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+      <p>&copy; 2024 Clicon. All rights reserved.</p>
+    </div>
+
+  <script src="js/top-banner.js"></script>
+  <script src="js/header.js"></script>
+</body>
+</html>
