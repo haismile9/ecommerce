@@ -172,6 +172,13 @@
   font-size: 12px;
   padding: 6px 12px;
   border-radius: 2px;
+  z-index: 3;
+}
+
+.side-content {
+  max-width: 55%; /* Giới hạn chiều rộng chữ để tự động xuống dòng trước khi chạm ảnh */
+  position: relative;
+  z-index: 2; /* Đảm bảo chữ luôn hiển thị phía trên hình ảnh */
 }
 
 .side-sub {
@@ -186,12 +193,15 @@
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 16px;
+  line-height: 1.3;
+  word-wrap: break-word; /* Tự động ngắt dòng gọn gàng */
 }
 
 .side-banner img {
-  max-width: 160px;
-  max-height: 100%;
-  object-fit: contain;
+
+  position: absolute; 
+  right: 0; 
+  bottom: 0;
 }
 
 /* Banner 2: Light Mode */

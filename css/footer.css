@@ -1,0 +1,185 @@
+/* ==========================================
+   SITE FOOTER STYLES
+   ========================================== */
+.site-footer {
+  background-color: #191c1f;
+  color: #929fa5;
+  padding-top: 72px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px 60px 16px;
+  display: grid;
+  /* Chia 5 cột với tỉ lệ độ rộng phù hợp */
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
+  gap: 32px;
+}
+
+/* 1. Cột Logo & Contact */
+.footer-logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.footer-logo i {
+  color: #fa8232;
+  font-size: 32px;
+}
+
+.contact-label {
+  font-size: 13px;
+  color: #77878f;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.phone-number {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.address {
+  color: #929fa5;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.email {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 2. Tiêu đề cột & Danh sách Links */
+.footer-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #929fa5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Gạch vàng highlight mục active */
+.active-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yellow-dash {
+  width: 16px;
+  height: 2px;
+  background-color: #e0a753;
+  display: inline-block;
+}
+
+.browse-link {
+  color: #e0a753 !important;
+  font-weight: 600;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 3. Nút App Store / Google Play */
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-btn {
+  background-color: #303639;
+  border-radius: 3px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.app-btn:hover {
+  background-color: #3d4448;
+}
+
+.app-btn i {
+  font-size: 32px;
+}
+
+.btn-text span {
+  font-size: 11px;
+  color: #adb7bc;
+  display: block;
+}
+
+.btn-text strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 4. Popular Tags */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-item {
+  color: #ffffff;
+  border: 1px solid #303639;
+  padding: 6px 12px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.tag-item:hover,
+.tag-item.active-tag {
+  border-color: #ffffff;
+  background-color: #303639;
+}
+
+/* 5. Bottom Copyright Bar */
+.footer-bottom {
+  border-top: 1px solid #303639;
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #77878f;
+}
