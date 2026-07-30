@@ -1,0 +1,102 @@
+/* ==========================================
+   14. SUBSCRIBE SECTION
+   ========================================== */
+.subscribe-section {
+  background-color: #1b6392; /* Màu xanh nền chuẩn Clicon */
+  padding: 72px 0 60px 0;
+  color: #ffffff;
+}
+
+.subscribe-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 1. Header Text */
+.subscribe-content {
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.subscribe-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.subscribe-desc {
+  font-size: 14px;
+  color: #e4e7e9;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* 2. Form Input & Button */
+.subscribe-form {
+  background-color: #ffffff;
+  padding: 12px 12px 12px 24px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 48px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.subscribe-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #191c1f;
+}
+
+.subscribe-form input::placeholder {
+  color: #929fa5;
+}
+
+.btn-subscribe {
+  background-color: #fa8232;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-subscribe:hover {
+  background-color: #e06c1b;
+}
+
+
+/* 4. Brand Logos - Sử dụng 1 ảnh duy nhất (Company Logo.png) */
+.brand-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.brand-logos img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logos img:hover {
+  opacity: 1;
+}

@@ -1,0 +1,198 @@
+/* ----------------------------------
+   SECTION 9. BANNER 2 SECTION (648px x 336px Banners - Chuẩn Figma)
+---------------------------------- */
+.banner2-section {
+  max-width: 1320px;
+  margin: 60px auto;
+  padding: 0 16px;
+}
+
+/* Container chia 2 cột đều nhau (mỗi banner rộng 648px, gap 24px) */
+.banner2-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Styling chung cho cả 2 banner (kích thước chính xác 648 x 336 px trong Figma) */
+.left-banner,
+.right-banner {
+  height: 336px;
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.left-banner:hover,
+.right-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* 1. Banner Bên Trái (Light Mode: Nền xám nhạt #f2f4f5) */
+.left-banner {
+  background-color: #f2f4f5;
+  color: #191c1f;
+}
+
+/* 2. Banner Bên Phải (Dark Mode: Nền đen #191c1f) */
+.right-banner {
+  background-color: #191c1f;
+  color: #ffffff;
+}
+
+/* Nội dung văn bản phía bên trái của mỗi banner */
+.banner2-section .banner-content {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  position: relative;
+}
+
+/* Badges */
+.banner2-section .badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+/* Badge xanh của banner trái */
+.left-banner .badge {
+  background-color: #2da5f3;
+  color: #ffffff;
+}
+
+/* Badge vàng của banner phải */
+.right-banner .badge {
+  background-color: #f3de6d;
+  color: #191c1f;
+}
+
+/* Tiêu đề banner */
+.banner2-section .banner-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+}
+
+.left-banner .banner-title {
+  color: #191c1f;
+}
+
+.right-banner .banner-title {
+  color: #ffffff;
+}
+
+/* Đoạn mô tả banner */
+.banner2-section .banner-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+.left-banner .banner-desc {
+  color: #475156;
+}
+
+.right-banner .banner-desc {
+  color: #adb7bc;
+}
+
+/* Nút Shop Now cam */
+.banner2-section .btn-shop-orange {
+  background-color: #fa8232;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.banner2-section .btn-shop-orange:hover {
+  background-color: #e06c1b;
+  transform: translateX(3px);
+}
+
+/* Khung và ảnh phía bên phải trong banner */
+.banner2-section .banner-image-link {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 260px;
+  height: 260px;
+}
+
+.banner2-section .banner-image {
+  max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.left-banner:hover .banner-image,
+.right-banner:hover .banner-image {
+  transform: scale(1.06);
+}
+
+/* Responsive cho màn hình tablet/mobile */
+@media (max-width: 1024px) {
+  .banner2-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-banner,
+  .right-banner {
+    height: auto;
+    min-height: 336px;
+  }
+}
+
+@media (max-width: 640px) {
+  .left-banner,
+  .right-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .banner2-section .banner-content {
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .banner2-section .banner-image-link {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 200px;
+    height: 200px;
+  }
+}

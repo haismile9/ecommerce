@@ -1,0 +1,421 @@
+/* ==========================================
+   SECTION 10. COMPUTER ACCESSORIES (REFACTORED)
+   ========================================== */
+.computer-section {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+.computer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 312px; /* Cột trái linh hoạt, cột phải cố định 312px */
+  gap: 24px;
+  align-items: start;
+}
+
+/* ----------------------------------
+   CỘT TRÁI: MAIN CONTENT & GRID
+---------------------------------- */
+.computer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e7e9;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.computer-header .section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #191c1f;
+  margin: 0;
+}
+
+.computer-header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.computer-filter {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.computer-filter .filter-btn {
+  text-decoration: none;
+  color: #5f6c72;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.computer-filter .filter-btn:hover,
+.computer-filter .filter-btn.active {
+  color: #191c1f;
+}
+
+.computer-filter .filter-btn.active {
+  font-weight: 600;
+}
+
+.computer-filter .filter-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -13px; /* Căn đúng đường kẻ xám bottom */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fa8232;
+}
+
+.browse-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fa8232;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.browse-link:hover {
+  color: #e06c1b;
+}
+
+/* Lưới Sản Phẩm 4x2 */
+.computer-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Thẻ Sản Phẩm Card */
+.computer-list .product-card {
+  border: 1px solid #e4e7e9;
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.computer-list .product-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Badges dùng class chung */
+.card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.badge-blue { background-color: #2da5f3; color: #ffffff; }
+.badge-red { background-color: #ee5858; color: #ffffff; }
+.badge-green { background-color: #2db224; color: #ffffff; }
+.badge-yellow { background-color: #f3de6d; color: #191c1f; }
+
+/* Khung Ảnh & Hover Actions */
+.card-img-box {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.card-img-box img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-box img {
+  transform: scale(1.05);
+}
+
+.card-hover-actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.product-card:hover .card-hover-actions {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-btn {
+  background-color: #ffffff;
+  color: #fa8232;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.hover-btn:hover {
+  background-color: #fa8232;
+  color: #ffffff;
+}
+
+/* Card Details */
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rating {
+  color: #fa8232;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-count {
+  color: #77878f;
+  margin-left: 4px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #191c1f;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.current-price {
+  color: #2da5f3;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.old-price {
+  color: #929fa5;
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+/* ----------------------------------
+   CỘT PHẢI: BANNER DỌC (312px)
+---------------------------------- */
+.computer-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.side-banner-card {
+  border-radius: 4px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1; /* Chia đôi chiều cao tự động bằng Flex */
+  box-sizing: border-box;
+}
+
+/* Banner 1 Style */
+.banner-yellow-theme {
+  background-color: #fceea4;
+}
+
+.banner-img-box img {
+  width: 140px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.banner-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #191c1f;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.banner-text {
+  font-size: 13px;
+  color: #475156;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.price-text {
+  font-size: 14px;
+  color: #475156;
+}
+
+.price-chip {
+  background-color: #ffffff;
+  color: #191c1f;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Banner 2 Style */
+.banner-blue-theme {
+  background-color: #124365;
+  color: #ffffff;
+}
+
+.banner-blue-theme .banner-heading {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.banner-blue-theme .banner-text {
+  color: #e4e7e9;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.tag-pill {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.highlight-txt {
+  color: #f3de6d;
+  font-weight: 600;
+}
+
+/* Common Banner Buttons */
+.btn-action {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-action:hover {
+  opacity: 0.9;
+}
+
+.btn-orange {
+  background-color: #fa8232;
+  color: #ffffff;
+}
+
+.btn-blue {
+  background-color: #2da5f3;
+  color: #ffffff;
+}
+
+/* ----------------------------------
+   RESPONSIVE
+---------------------------------- */
+@media (max-width: 1200px) {
+  .computer-container {
+    grid-template-columns: 1fr; /* Tràn xuống 1 cột khi màn hình vừa */
+  }
+  .computer-banner {
+    flex-direction: row; /* Chuyển 2 banner thành nằm ngang */
+  }
+}
+
+@media (max-width: 992px) {
+  .computer-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .computer-list {
+    grid-template-columns: 1fr;
+  }
+  .computer-banner {
+    flex-direction: column;
+  }
+}

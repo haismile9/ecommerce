@@ -1,0 +1,295 @@
+/* ----------------------------------
+   SECTION 8. FEATURED PRODUCTS (Chuẩn Figma)
+---------------------------------- */
+.featured-section {
+  max-width: 1320px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* Container chia 2 cột: Cột Trái (Banner Vàng 312px) - Cột Phải (Lưới Sản Phẩm) */
+.featured-container {
+  display: grid;
+  grid-template-columns: 312px 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* 1. BANNER VÀNG BÊN TRÁI (312px, cao bằng 2 hàng sản phẩm) */
+.left-banner-discount {
+  background-color: #f3de6d; /* Màu vàng đặc trưng của Banner trong Figma */
+  border-radius: 4px;
+  padding: 32px 0 0 0; /* Chỉ padding phần đỉnh, để ảnh đáy tràn viền 100% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0; /* Ngăn nội dung bên trong tự ý ép giãn container */
+  box-sizing: border-box;
+  overflow: hidden; /* Cắt ảnh đáy khít theo border-radius của banner */
+}
+
+.left-banner-discount .banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px; /* Giảm padding hai bên để có thêm không gian cho hàng ngang */
+  box-sizing: border-box;
+  flex-shrink: 0; /* Không bị thu nhỏ chữ và nút */
+}
+
+.left-banner-discount .sub-title {
+  color: #be461f;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.left-banner-discount .main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #191c1f;
+  margin: 8px 0;
+  line-height: 1.2;
+}
+
+.left-banner-discount .description {
+  color: #475156;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.left-banner-discount .offers-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  flex-wrap: nowrap; /* TUYỆT ĐỐI KHÔNG XUỐNG DÒNG */
+  white-space: nowrap; /* LUÔN GIỮ TRÊN 1 HÀNG */
+}
+
+.left-banner-discount .price-range {
+  font-size: 13px;
+  color: #475156;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.left-banner-discount .time-end {
+  background-color: #ffffff;
+  color: #191c1f;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.left-banner-discount .btn-shop-orange {
+  background-color: #fa8232;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.left-banner-discount .btn-shop-orange:hover {
+  background-color: #e06c1b;
+}
+
+.left-banner-discount img {
+  width: 100%;
+  flex: 1 1 auto; /* Chiếm trọn chiều cao còn lại trong banner */
+  min-height: 0; /* Ngăn ảnh portrait đẩy banner cao vượt quá lưới card */
+  object-fit: cover;
+  object-position: top center; /* Luôn giữ phần trọng tâm của ảnh ở phía trên */
+  margin-top: 24px;
+  margin-bottom: 0;
+  display: block;
+}
+
+/* 2. CỘT PHẢI: HEADER NGANG + LƯỚI 4x2 SẢN PHẨM */
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header ngang chứa Tiêu đề + Tabs bộ lọc + Link Browse All */
+.featured-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e7e9;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.featured-header .section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #191c1f;
+  margin: 0;
+}
+
+.featured-header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5f6c72;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.filter-btn:hover {
+  color: #191c1f;
+}
+
+.filter-btn.active {
+  color: #191c1f;
+  font-weight: 600;
+}
+
+.filter-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -13px; /* Căn đè lên border-bottom của .featured-header */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fa8232;
+}
+
+.browse-all-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fa8232;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.browse-all-link:hover {
+  color: #e06c1b;
+}
+
+/* Lưới 8 Sản phẩm (4 Cột x 2 Hàng) */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+/* Styling Thẻ sản phẩm */
+.featured-grid .product-card {
+  background: #ffffff;
+  border: 1px solid #e4e7e9;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.featured-grid .product-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Badges cho Featured Products */
+.featured-grid .card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 4;
+}
+
+.featured-grid .badge-status {
+  background-color: #ee5858;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.featured-grid .badge-best-deals {
+  background-color: #2da5f3;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.featured-grid .badge-discount {
+  background-color: #f3de6d;
+  color: #191c1f;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.featured-grid .badge-sale {
+  background-color: #2db224;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+/* Responsive cho màn hình vừa và nhỏ */
+@media (max-width: 1024px) {
+  .featured-container {
+    grid-template-columns: 1fr;
+  }
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
